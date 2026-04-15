@@ -16,7 +16,7 @@ public class nokia3310 {
     2.  Messages
     3.  Chat
     4.  Call Register
-    5.  Tones
+    5.  Tones1
     6.  Settings
     7.  Call divert
     8.  Games
@@ -129,7 +129,6 @@ public class nokia3310 {
                 6. Show call cost
                 7. Call cost settings
                 8. Prepaid credit
-
                 """;
             System.out.print(callReg);
             int callMenu = input.nextInt();
@@ -181,7 +180,7 @@ public class nokia3310 {
                 """;
             System.out.print(tones);
             }
-//Settttings
+//Settings
             case 6 -> {
                 String settings = """
     
