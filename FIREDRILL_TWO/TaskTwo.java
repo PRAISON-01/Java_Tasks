@@ -11,7 +11,7 @@ print average from task 9*/
 
 import java.util.Scanner;
 
-public class TaskOne {
+public class TaskTwo {
  public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     int score;
@@ -23,6 +23,7 @@ public class TaskOne {
         total += score;
         counter++;
     }
-    System.out.println("The sum of the 10 scores " + total);
+    int average = total/10;
+    System.out.println("The average of the scores is "+ average);
  }
 }

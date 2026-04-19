@@ -1,7 +1,7 @@
 /*collect 10 scores and print sum
 collect 10 scores and print average
 collect 10 scores and print sum and average
-collect 10 scores and print sum of the ecen indexes(2nd number, 4th number, 10th number)
+collect 10 scores and print sum of the even indexes(2nd number, 4th number... 10th number)
 collect 10 scores and print sum of only the even numbers in the collected score
 print average of task 5
 print sum and average of task 5
@@ -11,18 +11,22 @@ print average from task 9*/
 
 import java.util.Scanner;
 
-public class TaskOne {
+public class TaskFour {
  public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     int score;
     int counter = 1;
     int total = 0;
-    while(counter <= 10) {
+    int evenCounter = 0;
+        while(counter <= 10) {
         System.out.print("Enter Score you want to sum: ");
         score = input.nextInt();
-        total += score;
-        counter++;
+        if (counter % 2 == 0){
+            evenCounter+= score;
+            }
+        
+        counter+= 1;
     }
-    System.out.println("The sum of the 10 scores " + total);
+    System.out.println("The Sum of the even indexes is "+ total);
  }
 }
