@@ -1,8 +1,5 @@
 /*
-method 1: test that collection rate < 50%
-    (given) successful Delivery = 25 
-    (when) actualPayment = 
-    
+BackToSenderTest.java
 
 */
 
