@@ -4,49 +4,19 @@ TaskFour.java
 Write a function that takes an array and output an array containing the elements in the even index
 */
 
-//public class TaskFour{
-//
-//    public static void main(String[] args){
-//
-//
-//    }
-//
-//    public static int getEvenIndex(int[] array){
-//
-//        int[] num = new int[array.length];
-//        int index = 0;
-//        for(;index < array.length ; index += 2){
-//            num[] 
-//        }
-//        return num;
-//    }
-//
-//}
+public static TaskFour {
 
-public class TaskFour{
-public static void main(String[] args) {
-        int[] data = { 10, 20, 30, 40, 50, 60, 70 };
-        int[] evens = getEvenIndex(data);
+    public static int[] getEvenIndexArray(int[] numbers){
 
-        
-        for (int even : evens) {
-            System.out.print(even + " ");
-        }
-        
-    }
-
-    
-    public static int[] getEvenIndex(int[] array) {
-
-        int evenCount = (array.length + 1) / 2;  
-        int[] result   = new int[evenCount];
-
+        int size = (numbers.length + 1)/ 2;
+        int[] evenIndexedArray = new int[size];
         int count = 0;
-        for (int index = 0; index < array.length; index += 2) {
-            result[count++] = array[index];
+
+        for(int index = 0; index < numbers.length; index += 2){
+            evenIndexedAray[count++] = numbers[index];
         }
 
-        return result;
+    return evenIndexedAray;
     }
-}
 
+}

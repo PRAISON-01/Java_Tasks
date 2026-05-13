@@ -13,13 +13,16 @@ public static void main(String[] args) {
     
     public static int[] getEvenIndex(int[] array) {
 
-        int evenCount != (array.length + 1) / 2;  
-        int[] result   = new int[evenCount];
+        int[] result;
+        for(int pri = 2; pri < array.length; pri += 2){
+
+        result   = new int[array.length];
 
         int count = 0;
         for (int index = 0; index < array.length; index += 2) {
             result[count++] = array[index];
         }
+        ''}
 
         return result;
     }
