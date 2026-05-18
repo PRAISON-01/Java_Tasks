@@ -1,0 +1,72 @@
+========================================================================
+CHALLENGE: THE SMART TELEVISION (JAVA CODING EXERCISE)
+========================================================================
+
+SCENARIO
+------------------------------------------------------------------------
+You are writing the core control system for a Smart Television. The 
+manufacturer wants to ensure the TV handles power cycles correctly, stays 
+within valid channel/volume boundaries, and isolates settings between 
+different screens. You need to write the logic class and a separate 
+test class to verify your work.
+
+
+PART 1: REQUIREMENTS FOR Television.java
+------------------------------------------------------------------------
+Create a non-static class named Television without using the 'this' 
+keyword. It must fulfill these specifications:
+
+1. State variables:
+   * A boolean tracking if the power is on or off.
+   * An integer tracking the current volume level.
+   * An integer tracking the current channel number.
+
+2. Constructor:
+   * Accepts no parameters.
+   * By default, the TV must start with the power turned off, the volume 
+     at 10, and the channel at 1.
+
+3. Core Methods:
+   * powerOn() and powerOff() to toggle the power state.
+   * volumeUp(): Raises the volume by 1 level only if the power is on. 
+     The volume must never go above 100.
+   * volumeDown(): Lowers the volume by 1 level only if the power is on. 
+     The volume must never drop below 0 (mute).
+   * setChannel(int targetChannel): Changes the channel to the specified 
+     number only if the power is on. The channel must be between 1 and 
+     500 inclusive. If invalid, the channel must not change.
+
+4. Getter Methods:
+   * checkPower(): Returns the current power boolean.
+   * getVolume(): Returns the current volume integer.
+   * getChannel(): Returns the current channel integer.
+
+
+PART 2: REQUIREMENTS FOR TelevisionTest.java
+------------------------------------------------------------------------
+Create a separate class named TelevisionTest.
+
+1. It must contain a public static void main(String[] args) method to 
+   act as your terminal entry point.
+2. Inside main, instantiate your test class and call separate, 
+   non-static test methods.
+3. Write at least three distinct test methods to verify:
+   * Test A: The TV volume and channel cannot be changed while the 
+     power is turned off.
+   * Test B: The volume correctly boundaries at 0 (cannot go negative) 
+     and the channel rejects an invalid selection (like channel 999).
+   * Test C: Separate instances of Television maintain separate volumes 
+     and channels without leakage (isolation test).
+4. If a test fails, print an error message and call System.exit(1);. 
+   If all tests pass, print a success message.
+
+
+PART 3: COMPILATION AND RUNNING VIA TERMINAL
+------------------------------------------------------------------------
+To keep your Git repository clean and use your output folder setup, 
+execute these commands in your terminal:
+
+javac -d out Television.java TelevisionTest.java
+java -cp out TelevisionTest
+========================================================================
+

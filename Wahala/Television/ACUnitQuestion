@@ -1,0 +1,65 @@
+========================================================================
+CHALLENGE: THE SMART AC UNIT (JAVA CODING EXERCISE)
+========================================================================
+
+SCENARIO
+------------------------------------------------------------------------
+You are writing the software engine for a smart Air Conditioning unit. 
+The company wants to make sure the AC is efficient, safe, and doesn't 
+freeze the room or overheat itself. You need to write the core logic 
+class and a separate test class to verify your work.
+
+
+PART 1: REQUIREMENTS FOR AirConditioner.java
+------------------------------------------------------------------------
+Create a non-static class named AirConditioner without using the 'this' 
+keyword. It must fulfill these specifications:
+
+1. State variables:
+   * A boolean tracking if the power is on or off.
+   * An integer tracking the current target temperature.
+
+2. Constructor:
+   * Accepts one parameter: a starting temperature.
+   * By default, the AC must start with the power turned off.
+
+3. Core Methods:
+   * powerOn() and powerOff() to toggle the power state.
+   * coolDown(): Drops the temperature by 1 degree only if the power 
+     is on. The temperature must never drop below 16 degrees.
+   * heatUp(): Raises the temperature by 1 degree only if the power 
+     is on. The temperature must never go above 30 degrees.
+
+4. Getter Methods:
+   * checkPower(): Returns the current power boolean.
+   * getTemperature(): Returns the current target temperature integer.
+
+
+PART 2: REQUIREMENTS FOR AirConditionerTest.java
+------------------------------------------------------------------------
+Create a separate class named AirConditionerTest.
+
+1. It must contain a public static void main(String[] args) method to 
+   act as your terminal entry point.
+2. Inside main, instantiate your test class and call separate, 
+   non-static test methods.
+3. Write at least three distinct test methods to verify:
+   * Test A: The AC cannot change temperature while its power is 
+     turned off.
+   * Test B: The AC correctly stops cooling when it reaches the 
+     minimum limit of 16.
+   * Test C: Separate instances of AirConditioner do not leak data 
+     into each other (isolation test).
+4. If a test fails, print an error message and call System.exit(1);. 
+   If all pass, print a success message.
+
+
+PART 3: COMPILATION AND RUNNING VIA TERMINAL
+------------------------------------------------------------------------
+To compile and test without creating messy files in your main git repo,
+execute these commands:
+
+javac -d out AirConditioner.java AirConditionerTest.java
+java -cp out AirConditionerTest
+========================================================================
+
