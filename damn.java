@@ -46,6 +46,14 @@
 
 
 public class damn{
+    public static void main(String[] args){
 
-    public static int
+        int number = 25
+        
+    }
+
+    public static boolean isPrime(int number){
+
+
+    }
 }
